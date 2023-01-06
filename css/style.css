@@ -1,0 +1,173 @@
+*,*::before , *::after{
+    box-sizing: border-box;    
+}
+
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+}
+
+
+/* elements */
+
+h1{
+    font-size: 1rem;
+}
+
+h2{
+    font-size: 1.2rem;
+}
+
+h3{
+    font-size: 1rem;
+}
+
+p{
+    font-size: 1rem;
+}
+
+
+            /* layout */
+
+
+/* navigation bar */
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0.5em;
+    align-items: center;
+    padding: 0 0.5em;
+}
+
+navbar ul{
+    display: flex;
+    gap:1rem;
+    list-style-type:none;     
+}
+
+li a{
+    font-size: 0.9rem;
+    text-decoration: none;
+    color:black;
+}
+
+
+/* header */
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 2em;
+    /* https://images.pexels.com/photos/669996/pexels-photo-669996.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 */
+    background:url("images/red_crow_nebula-wallpaper-1920x1080.jpg");
+    background-size: cover;
+    max-height: 500px;
+    height: 30vh;
+    color: white;
+}
+.container h3,
+.container h2,
+.container p{
+    margin:0.2vh 0; 
+    margin-left: 1.5em;
+}
+
+
+
+.container h3{
+    margin-top: 0;
+    padding: 0.5em 0;
+    color:cornsilk;
+}
+
+
+/* main */
+
+.grid{
+    display: grid;
+    grid-template-columns:  1fr ;
+    padding: 2em 1.5em; 
+}
+
+.grid-item{
+    display: flex;
+    flex-direction: column;   
+}
+
+.section-img{
+    width: 100%;
+}
+
+.grid-item date{
+    margin-top: 1em;
+    color:  #5A5A5A;
+}
+.grid-item h3{
+    margin: 0.3em 0;
+}
+.grid-item p{
+    margin:0;
+}
+
+
+
+footer{
+    text-align: center;
+    background-color: black;
+    padding: 0.23em 0;
+}
+
+footer h2{
+   color: white;
+}
+
+
+/* media  */
+
+
+@media(min-width:768px){
+
+   .grid{
+        display: grid;
+        grid-template-columns:  1fr 1fr 1fr ;
+        padding: 2em 1.5em; 
+        grid-gap: 1em;
+    } 
+    .container{
+        height: 60vh;
+    }
+    .container h3,
+    .container h2,
+    .container p{
+        margin:1vh 0; 
+        margin-left: 1.5em;
+    }
+    
+    .container h3{
+        font-size: 3vh;
+    }
+    .container h2{
+        font-size: 4vh;
+    }
+    .container p{
+        font-size: 2.5vh;
+    }
+    
+    header{
+        margin: 0.5em 1em;
+        padding: 0.5em 1em;
+    }
+    
+    header h1{
+        font-size: 1.5rem;
+    }
+    
+    li a{
+        font-size: 1.2rem;
+    }
+}
+
+     
